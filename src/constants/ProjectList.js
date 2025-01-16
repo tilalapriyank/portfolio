@@ -96,6 +96,6 @@ export const ProjectList = [
     img: portfolio,
     tech: ["React.js", "Tailwind CSS"],
     source: "https://github.com/tilalapriyank/portfolio",
-    demo: null,
+    demo: "https://portfolio-dqehyisll-tilalapriyanks-projects.vercel.app/",
   },
 ];
