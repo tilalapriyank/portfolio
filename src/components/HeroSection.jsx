@@ -15,7 +15,7 @@ import Loading from "./Loading";
 
 const HeroSection = () => {
     const refContent = useRef(null);
-    const inViewContent = useInView(refContent, { once: true });
+    const inViewContent = useInView(refContent);
 
     return (
         <>

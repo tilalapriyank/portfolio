@@ -1,7 +1,4 @@
 import { useForm, ValidationError } from "@formspree/react";
-import linkedin from "../assets/linkedin.svg";
-import git from "../assets/git.svg";
-import twitter from "../assets/twitter.svg";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
@@ -96,7 +93,7 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={linkedin} alt="Linkedin Icon" />
+                            <BsLinkedin className="w-7 h-7" />
                             <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-10 -left-4 w-fit">
                                 Linkedin
                             </span>
