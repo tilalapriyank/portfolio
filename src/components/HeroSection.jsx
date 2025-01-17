@@ -49,7 +49,7 @@ const HeroSection = () => {
                                 500,
                                 "I'm a Full Stack Developer.",
                                 1000,
-                                "I build interactive UI using React and Next.js.",
+                                "I build interactive UI using React.",
                                 1000,
                                 "I convert designs into Modern UI.",
                                 1000,
