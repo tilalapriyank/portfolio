@@ -40,7 +40,7 @@ const HeroSection = () => {
                             Hi, I&apos;m{" "}
                             <span className="text-heading">Priyank</span> a{" "}
                             <span className="text-heading">passionate</span>{" "}
-                            Software Developer.
+                            Full Stack Developer.
                         </h1>
 
                         <TypeAnimation
