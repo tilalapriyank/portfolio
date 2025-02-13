@@ -5,6 +5,7 @@ import hitscore from "../assets/projects/hitscore.png";
 import wp_lms from "../assets/projects/wp_lms.png";
 import portfolio from "../assets/projects/portfolio.png";
 import lms from "../assets/projects/lms.png";
+import groupexpense from "../assets/projects/groupexpense.png";
 
 export const ProjectList = [
   {
@@ -97,5 +98,26 @@ export const ProjectList = [
     tech: ["React.js", "Tailwind CSS"],
     source: "https://github.com/tilalapriyank/portfolio",
     demo: "https://portfolio-dqehyisll-tilalapriyanks-projects.vercel.app/",
+  },
+  {
+    id: 8,
+    name: "Group Expense",
+    description: [
+      "A web app for tracking and splitting group expenses efficiently.",
+      "Automates cost-sharing and balances debts among users.",
+      "Built with React.js, Node.js, Express.js, and MongoDB for a seamless experience.",
+      "Uses Redux-Saga for real-time updates and TypeScript for reliability.",
+    ],
+    img: groupexpense,
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redux-Saga",
+      "TypeScript",
+    ],
+    source: "https://github.com/tilalapriyank/group-expense",
+    demo: "https://group-expense.vercel.app/",
   },
 ];
