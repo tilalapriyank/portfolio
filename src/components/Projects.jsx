@@ -29,7 +29,7 @@ const Projects = () => {
                 <div className="min-w-0 flex-grow mt-2 h-[4px] bg-textWhite"></div>
             </motion.div>
             {/* Projects */}
-            {ProjectList?.map((project, i) => {
+            {ProjectList?.slice().reverse().map((project, i) => {
                 return project.id % 2 === 0 ? (
                     <LeftView key={i} {...project} />
                 ) : (
