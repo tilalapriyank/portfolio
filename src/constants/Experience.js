@@ -2,17 +2,19 @@ export const Experiences = [
   {
     tab: "Igex Solutions",
     company: "Igex Solutions",
-    position: "Junior WordPress Developer",
+    position: "Full Stack Developer",
     type: "Ahmedabad, Gujarat",
     duration: "July 2024 – present",
     description: `
-          - Deepened WordPress knowledge by working extensively on the WPTutor LMS plugin project, gaining expertise in plugin development.
-          - Worked with more complex JavaScript code and incorporated React in certain parts of the plugin for dynamic functionality.
-          - Contributed to live projects, including optimizing performance and resolving issues.
-          - Learned Laravel and completed tasks during a one-week training period to expand back-end development skills.
-          - Developed team collaboration and communication skills, learning how to work effectively in a cooperative environment.
+          - Enhanced WordPress expertise by working extensively on the WPTutor LMS plugin, gaining in-depth knowledge of plugin development, customization, and optimization.
+          - Worked with advanced JavaScript and integrated React into specific parts of the plugin to add dynamic functionality and improve user experience.
+          - Gained hands-on experience in Full Stack Development, building and deploying React, Node.js, Express, and MongoDB applications with a focus on scalability and performance.
+          - Contributed to live projects, optimizing performance, fixing bugs, and implementing new features in both WordPress and full-stack applications.
+          - Expanded back-end development skills by learning Laravel and successfully completing tasks during an intensive one-week training period.
+          - Developed strong teamwork and communication skills, effectively collaborating with developers and stakeholders to deliver high-quality solutions.
         `,
-    technologies: "PHP, JavaScript, React, MySQL, Laravel, WordPress",
+    technologies:
+      "PHP, JavaScript, React, MySQL, Laravel, WordPress, React.js, Node.js, MongoDB",
   },
   {
     tab: "Dasinfomedia",
