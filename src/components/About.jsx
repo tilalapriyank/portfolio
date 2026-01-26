@@ -49,12 +49,12 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 md:max-w-[40%] sm:mt-10 "
         >
-          <img
-            src="/images/about.png"
-            alt="meme"
-            loading="lazy"
-            className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] "
-          />
+            <img
+                src="/images/about.png"
+                alt="Priyank Tilala - Full Stack Developer"
+                loading="lazy"
+                className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] "
+            />
         </motion.div>
         <motion.div
           ref={refContent}
@@ -69,28 +69,26 @@ const About = () => {
         >
           <div className="glass-dark rounded-2xl p-6 border border-accent1/20">
             <p className="text-textWhite text-lg sm:text-xl sm:leading-7">
-              I am a dedicated{" "}
-              <span className="text-accent1 font-semibold">WordPress Developer</span> with a
-              strong passion for creating innovative and user-centric web
-              solutions. With 9 months of experience in developing custom plugins,
-              themes, and optimizing website functionality, I specialize in
-              transforming ideas into interactive and efficient digital
-              experiences.
+              I'm a{" "}
+              <span className="text-accent1 font-semibold">Full Stack Developer</span> with a
+              strong foundation in both frontend and backend technologies. My journey
+              started with WordPress development, where I spent 9 months building
+              custom plugins, themes, and optimizing websites for performance.
               <br />
               <br />
-              Recently, I've been diving into{" "}
-              <span className="text-accent2 font-semibold">Full Stack Development</span>,
-              expanding my skill set with technologies like{" "}
-              <span className="text-accent1 font-semibold">Node.js, React.js, Express.js.</span>{" "}
-              This allows me to build versatile applications that are not only
-              functional but also scalable and performance-driven.
+              Now, I'm focused on{" "}
+              <span className="text-accent2 font-semibold">modern web development</span>,
+              specializing in{" "}
+              <span className="text-accent1 font-semibold">React.js, Node.js, and Express.js</span>{" "}
+              to build scalable, full-stack applications. With over 17 months of
+              professional experience, I've worked on projects ranging from WordPress
+              plugins to complex MERN stack applications.
               <br />
               <br />
-              Every project I take on is an opportunity to blend creativity and
-              technical expertise to deliver solutions that truly make a
-              difference. From building intuitive interfaces to crafting robust
-              backend systems, I'm committed to achieving excellence in every line
-              of code.
+              I'm passionate about writing clean, maintainable code and creating
+              solutions that solve real-world problems. Whether it's building intuitive
+              user interfaces or designing robust backend systems, I bring both
+              technical expertise and creative problem-solving to every project.
             </p>
           </div>
           <div className="mt-5 pl-4">

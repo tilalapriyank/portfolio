@@ -45,9 +45,9 @@ const HeroSection = () => {
                                 className="text-white mb-4 text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-[700] lg:leading-normal"
                             >
                                 Hi, I&apos;m{" "}
-                                <span className="text-accent1">Priyank</span> a{" "}
-                                <span className="text-accent2">passionate</span>{" "}
-                                Full Stack Developer.
+                                <span className="text-accent1">Priyank</span>, a{" "}
+                                <span className="text-accent2">Full Stack Developer</span>{" "}
+                                specializing in React & Node.js.
                             </motion.h1>
 
                             <motion.div
@@ -58,13 +58,13 @@ const HeroSection = () => {
                                 <TypeAnimation
                                     sequence={[
                                         500,
-                                        "I'm a Full Stack Developer.",
-                                        1000,
-                                        "I build interactive UI using React.",
-                                        1000,
-                                        "I convert designs into Modern UI.",
-                                        1000,
-                                        "I make ideas & things alive.",
+                                        "I build scalable web applications.",
+                                        1500,
+                                        "I create modern UIs with React & Next.js.",
+                                        1500,
+                                        "I develop robust APIs with Node.js & Express.",
+                                        1500,
+                                        "I turn complex problems into elegant solutions.",
                                         500,
                                     ]}
                                     speed={50}
