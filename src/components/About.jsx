@@ -25,7 +25,7 @@ const About = () => {
         <h3 className="text-textWhite text-3xl sm:text-5xl font-[800]">
           About Me
         </h3>
-        <div className="min-w-0 flex-grow mt-2 h-[4px] bg-textWhite"></div>
+        <div className="min-w-0 flex-grow mt-2 h-[4px] bg-gradient-neon"></div>
       </motion.div>
       <div className="py-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
         <motion.div
@@ -67,49 +67,52 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 text-justify"
         >
-          <p className="text-textWhite p-4 text-lg sm:text-xl sm:leading-7">
-            I am a dedicated{" "}
-            <span className="text-heading">WordPress Developer</span> with a
-            strong passion for creating innovative and user-centric web
-            solutions. With 9 months of experience in developing custom plugins,
-            themes, and optimizing website functionality, I specialize in
-            transforming ideas into interactive and efficient digital
-            experiences.
-            <br />
-            <br />
-            Recently, I’ve been diving into{" "}
-            <span className="text-heading">Full Stack Development</span>,
-            expanding my skill set with technologies like{" "}
-            <span className="text-heading">Node.js, React.js, Express.js.</span>{" "}
-            This allows me to build versatile applications that are not only
-            functional but also scalable and performance-driven.
-            <br />
-            <br />
-            Every project I take on is an opportunity to blend creativity and
-            technical expertise to deliver solutions that truly make a
-            difference. From building intuitive interfaces to crafting robust
-            backend systems, I’m committed to achieving excellence in every line
-            of code.
-          </p>
+          <div className="glass-dark rounded-2xl p-6 border border-accent1/20">
+            <p className="text-textWhite text-lg sm:text-xl sm:leading-7">
+              I am a dedicated{" "}
+              <span className="text-accent1 font-semibold">WordPress Developer</span> with a
+              strong passion for creating innovative and user-centric web
+              solutions. With 9 months of experience in developing custom plugins,
+              themes, and optimizing website functionality, I specialize in
+              transforming ideas into interactive and efficient digital
+              experiences.
+              <br />
+              <br />
+              Recently, I've been diving into{" "}
+              <span className="text-accent2 font-semibold">Full Stack Development</span>,
+              expanding my skill set with technologies like{" "}
+              <span className="text-accent1 font-semibold">Node.js, React.js, Express.js.</span>{" "}
+              This allows me to build versatile applications that are not only
+              functional but also scalable and performance-driven.
+              <br />
+              <br />
+              Every project I take on is an opportunity to blend creativity and
+              technical expertise to deliver solutions that truly make a
+              difference. From building intuitive interfaces to crafting robust
+              backend systems, I'm committed to achieving excellence in every line
+              of code.
+            </p>
+          </div>
           <div className="mt-5 pl-4">
-            <h4 className="text-2xl font-bold mb-4">Education</h4>
+            <h4 className="text-2xl font-bold mb-4 text-accent1">Education</h4>
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="glass-dark rounded-lg p-6 border border-accent1/20"
             >
-              <h5 className="text-2xl font-[600]">
+              <h5 className="text-2xl font-[600] text-accent1">
                 Gujarat Technologies University
               </h5>
-              <span className="text-heading">
+              <span className="text-textWhite">
                 <div className="mt-2 flex items-center justify-between gap-4">
                   <p>Bachelor of Technology in Computer Engineering</p>
                   <p>
-                    <span className="font-bold">2020 - 2024</span>
+                    <span className="font-bold text-accent2">2020 - 2024</span>
                   </p>
                 </div>
-                <p>
-                  <span>CPI:</span> 8.25 | <span>CGPA:</span> 8.01
+                <p className="mt-2">
+                  <span className="text-accent2">CPI:</span> 8.25 | <span className="text-accent2">CGPA:</span> 8.01
                 </p>
               </span>
             </motion.div>

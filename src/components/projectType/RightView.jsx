@@ -20,7 +20,7 @@ const RightView = ({ id, name, description, img, tech, source, demo }) => {
             : { opacity: 1, filter: "blur(6px) brightness(50%)" }
         }
         transition={{ duration: 1 }}
-        className="col-span-7 brightness-50 hover:brightness-100 transition-all ease-in-out duration-700 hover:scale-[1.05] hover:z-20 "
+                className="col-span-7 brightness-50 hover:brightness-100 transition-all ease-in-out duration-700 hover:scale-[1.05] hover:z-20 rounded-lg overflow-hidden shadow-glass"
         onMouseEnter={() => {
           setIsMouseOver(true);
         }}
@@ -45,18 +45,20 @@ const RightView = ({ id, name, description, img, tech, source, demo }) => {
       >
         {/* project tagline */}
         <div
-          className={`text-3xl text-heading font-[600] w-full text-right py-2 lg:py-0 px-3 transition-all ease-in-out duration-300`}
+          className={`text-3xl font-[600] w-full text-right py-2 lg:py-0 px-3 transition-all ease-in-out duration-300 ${
+            isMouseOver ? "text-accent1" : "text-textWhite"
+          }`}
         >
           <h1>{name}</h1>
         </div>
         {/* description absolute */}
-        <div className="lg:absolute group top-[40px] z-10 right-0 w-full lg:w-[500px] md:pl-4 md:py-2 mt-1">
+        <div className="lg:absolute group top-[40px] z-10 right-0 w-full lg:w-[500px] md:pl-4 md:py-2 mt-1 glass-dark rounded-lg border border-accent1/20 shadow-glass">
           {description.map((desc, index) => (
             <div key={index} className="flex items-center space-x-2 mb-2">
-              <ArrowRight className="h-5 w-4 flex-none" />
+              <ArrowRight className="h-5 w-4 flex-none text-accent1" />
               <p
                 className={`text-md text-textLight cursor-pointer ${
-                  isMouseOver && "text-textPara"
+                  isMouseOver && "text-accent1"
                 } transition-all ease-in-out duration-300`}
               >
                 {desc}
@@ -66,9 +68,16 @@ const RightView = ({ id, name, description, img, tech, source, demo }) => {
         </div>
 
         {/* tech stack */}
-        <div className="flex gap-2 md:gap-3 items-center mt-4 lg:mt-[250px] text-xs md:text-sm text-heading ">
+        <div className="flex gap-2 md:gap-3 items-center mt-4 lg:mt-[250px] text-xs md:text-sm flex-wrap justify-end">
           {tech?.map((item, i) => {
-            return <span key={i}>{item}</span>;
+            return (
+              <span 
+                key={i}
+                className="glass rounded-full px-3 py-1 text-textWhite border border-accent1/30 hover:border-accent1 hover:text-accent1 transition-all duration-300"
+              >
+                {item}
+              </span>
+            );
           })}
         </div>
         {/* links */}
@@ -77,9 +86,9 @@ const RightView = ({ id, name, description, img, tech, source, demo }) => {
             href={source}
             target="_blank"
             rel="noreferrer"
-            className="flex gap-1 items-center group relative animate-bounce"
+            className="flex gap-1 items-center group relative hover:scale-110 transition-transform duration-300"
           >
-            <GitHubIcon />
+            <GitHubIcon className="text-accent1 hover:text-accent2 transition-colors duration-300" />
             <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-7 -left-[120%] w-[90px]">
               Source Code
             </span>
@@ -89,9 +98,9 @@ const RightView = ({ id, name, description, img, tech, source, demo }) => {
               href={demo}
               target="_blank"
               rel="noreferrer"
-              className="flex gap-2 items-center group relative animate-bounce"
-            >
-              <LaunchIcon />
+            className="flex gap-2 items-center group relative hover:scale-110 transition-transform duration-300"
+          >
+            <LaunchIcon className="text-accent1 hover:text-accent2 transition-colors duration-300" />
               <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-7 -left-1/2 w-fit">
                 Demo
               </span>

@@ -1,5 +1,4 @@
 import { useForm, ValidationError } from "@formspree/react";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -53,7 +52,7 @@ const Contact = () => {
                 <h3 className="text-textWhite text-3xl sm:text-5xl font-[800]">
                     Get In Touch
                 </h3>
-                <div className="min-w-0 flex-grow mt-2 h-[4px] bg-textWhite"></div>
+                <div className="min-w-0 flex-grow mt-2 h-[4px] bg-gradient-neon"></div>
             </motion.div>
             <div className="grid md:grid-cols-2 mt-4 md:mt-10 py-12 gap-4 relative">
                 <motion.div
@@ -65,8 +64,9 @@ const Contact = () => {
                             : { opacity: 1, y: -50 }
                     }
                     transition={{ duration: 1 }}
+                    className="glass-dark rounded-2xl p-6 border border-accent1/20"
                 >
-                    <h5 className="text-2xl font-bold leading-9 text-textWhite my-2">
+                    <h5 className="text-2xl font-bold leading-9 text-accent1 my-2">
                         Let&apos;s Connect
                     </h5>
                     <p className="text-textWhite max-w-md">
@@ -78,23 +78,23 @@ const Contact = () => {
                     <div className="flex flex-row gap-5 mt-6">
                         <a
                             href="https://github.com/tilalapriyank/"
-                            className="relative group hover:-translate-y-[2px] transition-all duration-500 ease-in-out "
+                            className="relative group hover:-translate-y-[2px] transition-all duration-500 ease-in-out hover:scale-110"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <BsGithub className="w-7 h-7" />
-                            <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-10 -left-3 w-fit">
+                            <BsGithub className="w-7 h-7 text-accent1 group-hover:text-accent2 transition-colors duration-300" />
+                            <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-10 -left-3 w-fit glass-dark rounded px-2 py-1">
                                 Github
                             </span>
                         </a>
                         <a
                             href="https://www.linkedin.com/in/priyank-patel-432b56214/"
-                            className="relative group hover:-translate-y-[2px] transition-all duration-500 ease-in-out "
+                            className="relative group hover:-translate-y-[2px] transition-all duration-500 ease-in-out hover:scale-110"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <BsLinkedin className="w-7 h-7" />
-                            <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-10 -left-4 w-fit">
+                            <BsLinkedin className="w-7 h-7 text-accent1 group-hover:text-accent2 transition-colors duration-300" />
+                            <span className="text-textLight text-xs px-2 opacity-0 group-hover:opacity-100 absolute top-10 -left-4 w-fit glass-dark rounded px-2 py-1">
                                 Linkedin
                             </span>
                         </a>
@@ -122,7 +122,7 @@ const Contact = () => {
                             </p>
                         </div>
                     ) : (
-                        <form className="flex flex-col" onSubmit={handleSubmit}>
+                        <form className="flex flex-col glass-dark rounded-2xl p-6 border border-accent1/20" onSubmit={handleSubmit}>
                             <div className="mb-6">
                                 <label
                                     htmlFor="email"
@@ -137,7 +137,7 @@ const Contact = () => {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                                    className="glass border border-accent1/30 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-accent1 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all duration-300"
                                     placeholder="abc@gmail.com"
                                 />
                                 <ValidationError
@@ -160,7 +160,7 @@ const Contact = () => {
                                     required
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                                    className="glass border border-accent1/30 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-accent1 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all duration-300"
                                     placeholder="Just saying hi"
                                 />
                                 <ValidationError
@@ -181,7 +181,7 @@ const Contact = () => {
                                     id="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                                    className="glass border border-accent1/30 placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-accent1 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all duration-300"
                                     placeholder="Let's talk about..."
                                 />
                                 <ValidationError
@@ -193,9 +193,10 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={state.submitting}
-                                className="rounded-full mr-4 bg-transparent border-white border-2 text-white text-center hover:bg-darkHover font-medium py-2.5 px-5 w-full hover:scale-[0.98] transition-all duration-500 ease-in-out "
+                                className="group relative rounded-full mr-4 bg-gradient-neon text-white text-center font-medium py-2.5 px-5 w-full overflow-hidden hover:scale-105 hover:shadow-neon-cyan transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Send Message
+                                <span className="relative z-10">Send Message</span>
+                                <div className="absolute inset-0 bg-gradient-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </button>
                         </form>
                     )}

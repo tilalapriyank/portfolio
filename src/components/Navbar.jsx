@@ -21,12 +21,12 @@ const Navbar = () => {
   const [mobileView, setMobileView] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-30 bg-bgDark">
+    <nav className="fixed top-0 left-0 w-full z-30">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className="container flex flex-wrap items-center justify-between px-8 py-6 mx-auto bg-bgDark text-textWhite"
+        className="container flex flex-wrap items-center justify-between px-8 py-6 mx-auto glass-dark text-textWhite border-b border-white/10"
       >
         <ScrollLink
           to="intro"
@@ -69,24 +69,29 @@ const Navbar = () => {
                 >
                   <AiFillCloseCircle />
                 </span>
-                <div className="flex gap-4 p-6 border-b-white border-b-2 text-[22px]">
-                  <a
-                    href="www.linkedin.com/in/priyank-patel-432b56214"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsLinkedin />
-                  </a>
-                  <a
-                    href="https://github.com/tilalapriyank"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsGithub />
-                  </a>
-                  <a href="mailto:priyank1504patel@gmail.com">
-                    <HiMailOpen />
-                  </a>
+                                <div className="flex gap-4 p-6 border-b-white border-b-2 text-[22px]">
+                                    <a
+                                        href="https://www.linkedin.com/in/priyank-patel-432b56214"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-accent1 transition-colors duration-300 hover:scale-110"
+                                    >
+                                        <BsLinkedin />
+                                    </a>
+                                    <a
+                                        href="https://github.com/tilalapriyank"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-accent1 transition-colors duration-300 hover:scale-110"
+                                    >
+                                        <BsGithub />
+                                    </a>
+                                    <a 
+                                        href="mailto:priyank1504patel@gmail.com"
+                                        className="hover:text-accent1 transition-colors duration-300 hover:scale-110"
+                                    >
+                                        <HiMailOpen />
+                                    </a>
                 </div>
 
                 <div>
@@ -101,7 +106,7 @@ const Navbar = () => {
                           onClick={() => {
                             setMobileView(!mobileView);
                           }}
-                          className="relative cursor-pointer text-[18px] font-[500] hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                                    className="relative cursor-pointer text-[18px] font-[500] hover:no-underline hover:text-accent1 transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-accent1 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                         >
                           {menuItem.name}
                         </ScrollLink>
@@ -129,7 +134,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={1000}
                   title={menuItem.name}
-                  className="relative cursor-pointer text-[18px] font-[500] hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                                    className="relative cursor-pointer text-[18px] font-[500] hover:no-underline hover:text-accent1 transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-accent1 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                 >
                   {menuItem.name}
                 </ScrollLink>
@@ -138,30 +143,35 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="hidden md:flex items-center justify-between gap-4 text-[24px]">
-          <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer">
-            <a
-              href="www.linkedin.com/in/priyank-patel-432b56214"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsLinkedin />
-            </a>
-          </span>
-          <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer">
-            <a
-              href="https://github.com/tilalapriyank"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsGithub />
-            </a>
-          </span>
-          <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer">
-            <a href="mailto:priyank1504patel@gmail.com">
-              <HiMailOpen />
-            </a>
-          </span>
+                <div className="hidden md:flex items-center justify-between gap-4 text-[24px]">
+                    <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer group">
+                        <a
+                            href="https://www.linkedin.com/in/priyank-patel-432b56214"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group-hover:text-accent1 transition-colors duration-300"
+                        >
+                            <BsLinkedin />
+                        </a>
+                    </span>
+                    <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer group">
+                        <a
+                            href="https://github.com/tilalapriyank"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group-hover:text-accent1 transition-colors duration-300"
+                        >
+                            <BsGithub />
+                        </a>
+                    </span>
+                    <span className="py-2 px-1 hover:-translate-y-[2px] transition-all duration-500 ease-in-out cursor-pointer group">
+                        <a 
+                            href="mailto:priyank1504patel@gmail.com"
+                            className="group-hover:text-accent1 transition-colors duration-300"
+                        >
+                            <HiMailOpen />
+                        </a>
+                    </span>
         </div>
       </motion.div>
     </nav>
