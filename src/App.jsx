@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 
 export default function App() {
   return (
-    <body className="bg-bgDark">
+    <div className="bg-bgDark min-h-screen">
       <Navbar />
       <main className="container text-textWhite px-5 md:px-8 mx-auto">
         <HeroSection />
@@ -19,6 +19,6 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
-    </body>
+    </div>
   );
 }

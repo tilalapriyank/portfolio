@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MySkills } from "../constants/Skills";
+import { FaCode } from "react-icons/fa6";
 
 const SkillSection = () => {
   const variants1 = {
@@ -33,7 +34,12 @@ const SkillSection = () => {
                   transition={{ duration: 0.3, delay: idx * 0.05 }}
                   className="group glass rounded-xl p-4 flex items-center gap-3 hover:border-accent1 hover:shadow-neon-cyan transition-all duration-300 cursor-pointer border border-accent1/30"
                 >
-                  <skill.icon className="scale-[150%] text-accent1 group-hover:text-accent2 transition-colors duration-300" />
+                  {(() => {
+                    const IconComponent = skill.icon || FaCode;
+                    return (
+                      <IconComponent className="scale-[150%] text-accent1 group-hover:text-accent2 transition-colors duration-300" />
+                    );
+                  })()}
                   <p className="text-lg text-textWhite group-hover:text-accent1 transition-colors duration-300">{skill.name}</p>
                 </motion.div>
               ))}
