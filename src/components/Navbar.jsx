@@ -20,16 +20,16 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className="container flex flex-wrap items-center justify-between px-8 py-6 mx-auto glass-dark text-textWhite border-b border-white/10"
+        className="container flex flex-wrap items-center justify-between px-6 sm:px-8 py-4 sm:py-5 mx-auto glass-dark text-textWhite border-b border-white/10 shadow-glass rounded-b-2xl"
       >
         <Link
           href="/"
-          className="min-w-[150px] cursor-pointer font-[600] sm:font-[800] text-lg sm:text-xl tracking-wide"
+          className="min-w-[150px] cursor-pointer font-[700] sm:font-[800] text-lg sm:text-xl tracking-wide"
         >
           {/* for mobile view */}
-          <span className="sm:hidden">@Priyank</span>
+          <span className="sm:hidden bg-gradient-neon bg-clip-text text-transparent">@Priyank</span>
           {/* for web view */}
-          <span className="hidden sm:block">@Tilala_Priyank</span>
+          <span className="hidden sm:block bg-gradient-neon bg-clip-text text-transparent">@Tilala_Priyank</span>
         </Link>
 
         {/* toggle navbar mobile view */}
@@ -52,7 +52,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
               className="absolute top-0 left-0 flex flex-col bg-transparent w-full min-h-screen"
             >
-              <div className="flex flex-col md:hidden bg-bgDark relative p-10">
+              <div className="flex flex-col md:hidden bg-bgDark/95 backdrop-blur-lg relative p-10 border-b border-white/10">
                 <span
                   className="absolute top-[62px] right-12 text-[24px]"
                   onClick={() => {
@@ -96,7 +96,7 @@ const Navbar = () => {
                           onClick={() => {
                             setMobileView(!mobileView);
                           }}
-                          className={`relative cursor-pointer text-[18px] font-[500] hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
+                          className={`relative cursor-pointer text-[18px] font-[600] hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
                             pathname === menuItem.url
                               ? "text-accent1 after:w-full after:bg-accent1"
                               : "hover:text-accent1 after:w-0 after:bg-accent1 hover:after:w-full"
@@ -126,7 +126,7 @@ const Navbar = () => {
                 <Link
                   href={menuItem.url}
                   title={menuItem.name}
-                  className={`relative cursor-pointer text-[18px] font-[500] hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
+                  className={`relative cursor-pointer text-[16px] sm:text-[17px] font-[600] px-2 py-1 rounded-md hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
                     pathname === menuItem.url
                       ? "text-accent1 after:w-full after:bg-accent1"
                       : "hover:text-accent1 after:w-0 after:bg-accent1 hover:after:w-full"

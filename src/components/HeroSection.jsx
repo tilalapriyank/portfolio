@@ -14,7 +14,7 @@ const HeroSection = () => {
     return (
         <>
             <section
-                className="sm:px-8 overflow-hidden pb-8 pt-[110px] sm:pt-[120px] sm:pb-10"
+                className="sm:px-8 overflow-hidden pb-8 pt-[110px] sm:pt-[120px] sm:pb-10 aurora-bg"
                 id="intro"
             >
                 <div className="grid grid-cols-1 sm:grid-cols-12 place-items-center">
@@ -31,7 +31,17 @@ const HeroSection = () => {
                         className="col-span-7 relative"
                     >
                         {/* Glassmorphic card background */}
-                        <div className="glass-dark rounded-2xl p-6 sm:p-8 md:p-10 -m-4 sm:-m-6 md:-m-8">
+                        <div className="glass-dark rounded-3xl p-6 sm:p-8 md:p-10 -m-4 sm:-m-6 md:-m-8 border border-accent1/20">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={inViewContent ? { opacity: 1, y: 0 } : {}}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                                className="mb-4 flex flex-wrap gap-2"
+                            >
+                                <span className="glass rounded-full px-3 py-1 text-xs sm:text-sm border border-accent1/30 text-accent1">Team Lead</span>
+                                <span className="glass rounded-full px-3 py-1 text-xs sm:text-sm border border-accent2/30 text-accent2">SaaS Architecture</span>
+                                <span className="glass rounded-full px-3 py-1 text-xs sm:text-sm border border-accent1/30 text-accent1">Automation</span>
+                            </motion.div>
                             <motion.h1 
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={inViewContent ? { opacity: 1, y: 0 } : {}}
@@ -71,7 +81,7 @@ const HeroSection = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={inViewContent ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.8, delay: 0.6 }}
-                                className="text-textPara text-base sm:text-lg mb-6 mt-3 lg:text-xl"
+                                className="text-textWhite/80 text-base sm:text-lg mb-6 mt-3 lg:text-xl"
                             >
                                 Stick around to see some of my work.
                             </motion.p>
@@ -96,6 +106,25 @@ const HeroSection = () => {
                                 >
                                     Download CV
                                 </a>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 18 }}
+                                animate={inViewContent ? { opacity: 1, y: 0 } : {}}
+                                transition={{ duration: 0.7, delay: 1 }}
+                                className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3"
+                            >
+                                <div className="glass rounded-xl p-3 border border-accent1/20">
+                                    <p className="text-accent1 text-xl font-bold">25k+</p>
+                                    <p className="text-xs text-textWhite/70">Tenants scale</p>
+                                </div>
+                                <div className="glass rounded-xl p-3 border border-accent2/20">
+                                    <p className="text-accent2 text-xl font-bold">92.7%</p>
+                                    <p className="text-xs text-textWhite/70">Fewer DB connections</p>
+                                </div>
+                                <div className="glass rounded-xl p-3 border border-accent1/20 col-span-2 sm:col-span-1">
+                                    <p className="text-accent1 text-xl font-bold">Full Stack</p>
+                                    <p className="text-xs text-textWhite/70">Next.js · Node.js · Zoho</p>
+                                </div>
                             </motion.div>
                         </div>
                     </motion.div>
