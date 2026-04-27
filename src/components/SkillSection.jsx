@@ -1,6 +1,8 @@
+"use client";
+
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MySkills } from "../constants/Skills";
+import { mySkills } from "../constants/skillsData";
 import { FaCode } from "react-icons/fa6";
 
 const SkillSection = () => {
@@ -14,7 +16,7 @@ const SkillSection = () => {
 
   return (
     <div className="text-textWhite mt-10" ref={sectionRef}>
-      {MySkills.map((section) => {
+      {mySkills.map((section) => {
         return (
           <motion.div
             key={section.index}

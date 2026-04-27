@@ -1,3 +1,5 @@
+"use client";
+
 import LeftView from "./projectType/LeftView";
 import RightView from "./projectType/RightView";
 import { ProjectList } from "../constants/ProjectList";

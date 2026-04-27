@@ -1,17 +1,11 @@
+"use client";
+
 import { TypeAnimation } from "react-type-animation";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-    Link as ScrollLink,
-    Button,
-    Element,
-    Events,
-    animateScroll as scroll,
-    scrollSpy,
-    scroller,
-} from "react-scroll";
 import { Suspense } from "react";
 import Loading from "./Loading";
+import Link from "next/link";
 
 const HeroSection = () => {
     const refContent = useRef(null);
@@ -87,15 +81,13 @@ const HeroSection = () => {
                                 transition={{ duration: 0.8, delay: 0.8 }}
                                 className="flex items-center gap-4 flex-col sm:flex-row"
                             >
-                                <ScrollLink
-                                    to="contact"
-                                    smooth={true}
-                                    duration={1000}
+                                <Link
+                                    href="/contact"
                                     className="group relative px-6 py-3 cursor-pointer w-full sm:w-fit rounded-full md:mr-4 bg-gradient-neon text-white text-lg font-[700] text-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-neon-cyan"
                                 >
                                     <span className="relative z-10">Hire Me</span>
                                     <div className="absolute inset-0 bg-gradient-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                </ScrollLink>
+                                </Link>
                                 <a
                                     href="https://drive.google.com/file/d/1vp9XNX6VGZ51p46-H9hB5Wao7ra9BY1k/view?usp=drivesdk"
                                     target="_blank"

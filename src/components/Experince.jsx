@@ -1,6 +1,8 @@
+"use client";
+
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Experiences } from "../constants/Experience";
+import { experiences } from "../constants/experienceData";
 
 const Experience = () => {
   const refHeading = useRef(null);
@@ -39,7 +41,7 @@ const Experience = () => {
 
       <div className="mt-8 py-4 flex flex-col md:flex-row gap-6">
         <div className="ps-8 flex flex-col md:w-[250px]">
-          {Experiences.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <motion.button
               key={index}
               onClick={() => setActiveTab(index)}
@@ -67,16 +69,16 @@ const Experience = () => {
         >
           <span className="flex justify-between items-center">
             <h3 className="text-2xl font-bold text-white">
-              {Experiences[activeTab].company}
+              {experiences[activeTab].company}
             </h3>
-            <p className="text-m text-white">{Experiences[activeTab].type}</p>
+            <p className="text-m text-white">{experiences[activeTab].type}</p>
           </span>
           <span className="flex justify-between items-center">
             <span className="block mb-2 text-heading">
-              {Experiences[activeTab].position}
+              {experiences[activeTab].position}
             </span>
             <p className="text-m text-heading">
-              {Experiences[activeTab].duration}
+              {experiences[activeTab].duration}
             </p>
           </span>
           <motion.p
@@ -85,7 +87,7 @@ const Experience = () => {
             transition={{ duration: 0.5 }}
             className="text-gray-300 leading-relaxed text-lg" 
           >
-            {Experiences[activeTab].description
+            {experiences[activeTab].description
               .split("\n")
               .map((line, index) => (
                 <span key={index}>
@@ -97,7 +99,7 @@ const Experience = () => {
           <p className="text-md text-gray-400 mt-6 text-base">
             <span className="font-semibold text-white">Technologies:</span>{" "}
             <span className="text-heading">
-              {Experiences[activeTab].technologies}
+              {experiences[activeTab].technologies}
             </span>
           </p>
         </motion.div>

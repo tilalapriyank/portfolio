@@ -1,9 +1,10 @@
+"use client";
+
 import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
-import Loading from "./Loading";
 
 const Contact = () => {
     const refHeading = useRef(null);
@@ -12,7 +13,10 @@ const Contact = () => {
     const inViewContent = useInView(refContent);
 
     const [show, setShow] = useState(false);
-    const formId = import.meta.env.VITE_FORM_ID;
+    const formId =
+        process.env.NEXT_PUBLIC_FORM_ID ||
+        process.env.VITE_FORM_ID ||
+        "xrgjlrza";
     const [state, handleSubmit] = useForm(formId);
     const [formData, setFormData] = useState({
         email: "",

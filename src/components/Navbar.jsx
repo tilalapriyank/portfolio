@@ -1,24 +1,18 @@
+"use client";
+
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiMailOpen } from "react-icons/hi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { SiEbox } from "react-icons/si";
-import { MenuItems } from "../constants/MenuItem";
-import { Link } from "react-router-dom";
+import { menuItems } from "../constants/menuItems";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import * as Scroll from "react-scroll";
-import {
-  Link as ScrollLink,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [mobileView, setMobileView] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 w-full z-30">
@@ -28,17 +22,15 @@ const Navbar = () => {
         transition={{ duration: 3 }}
         className="container flex flex-wrap items-center justify-between px-8 py-6 mx-auto glass-dark text-textWhite border-b border-white/10"
       >
-        <ScrollLink
-          to="intro"
-          smooth={true}
-          duration={500}
+        <Link
+          href="/"
           className="min-w-[150px] cursor-pointer font-[600] sm:font-[800] text-lg sm:text-xl tracking-wide"
         >
           {/* for mobile view */}
           <span className="sm:hidden">@Priyank</span>
           {/* for web view */}
           <span className="hidden sm:block">@Tilala_Priyank</span>
-        </ScrollLink>
+        </Link>
 
         {/* toggle navbar mobile view */}
         <span
@@ -96,20 +88,22 @@ const Navbar = () => {
 
                 <div>
                   <ul className="flex flex-col items-center justify-between p-5 gap-5 relative">
-                    {MenuItems?.map((menuItem) => (
+                    {menuItems?.map((menuItem) => (
                       <li key={menuItem.id}>
-                        <ScrollLink
-                          to={menuItem.url}
-                          smooth={true}
-                          duration={1000}
+                        <Link
+                          href={menuItem.url}
                           title={menuItem.name}
                           onClick={() => {
                             setMobileView(!mobileView);
                           }}
-                                    className="relative cursor-pointer text-[18px] font-[500] hover:no-underline hover:text-accent1 transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-accent1 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                          className={`relative cursor-pointer text-[18px] font-[500] hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
+                            pathname === menuItem.url
+                              ? "text-accent1 after:w-full after:bg-accent1"
+                              : "hover:text-accent1 after:w-0 after:bg-accent1 hover:after:w-full"
+                          }`}
                         >
                           {menuItem.name}
-                        </ScrollLink>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -127,17 +121,19 @@ const Navbar = () => {
         {/* full screen navbar */}
         <div className="hidden md:block">
           <ul className="flex items-center justify-between gap-5 relative">
-            {MenuItems?.map((menuItem) => (
+            {menuItems?.map((menuItem) => (
               <li key={menuItem.id}>
-                <ScrollLink
-                  to={menuItem.url}
-                  smooth={true}
-                  duration={1000}
+                <Link
+                  href={menuItem.url}
                   title={menuItem.name}
-                                    className="relative cursor-pointer text-[18px] font-[500] hover:no-underline hover:text-accent1 transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:w-0 after:bg-accent1 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                  className={`relative cursor-pointer text-[18px] font-[500] hover:no-underline transition-colors duration-300 after:absolute after:left-0 after:-bottom-[3px] after:h-[3px] after:transition-all after:duration-300 after:ease-in-out ${
+                    pathname === menuItem.url
+                      ? "text-accent1 after:w-full after:bg-accent1"
+                      : "hover:text-accent1 after:w-0 after:bg-accent1 hover:after:w-full"
+                  }`}
                 >
                   {menuItem.name}
-                </ScrollLink>
+                </Link>
               </li>
             ))}
           </ul>
