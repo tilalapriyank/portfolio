@@ -97,7 +97,7 @@ const HeroSection = () => {
                                     <div className="absolute inset-0 bg-gradient-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </ScrollLink>
                                 <a
-                                    href="https://drive.google.com/file/d/1SC7wVl0dTVNE_AVOiAGbt3WWGof-yIbp/view?usp=drive_link"
+                                    href="https://drive.google.com/file/d/1vp9XNX6VGZ51p46-H9hB5Wao7ra9BY1k/view?usp=drivesdk"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group px-6 py-3 w-full sm:w-fit rounded-full md:mr-4 glass border-2 border-accent1 text-white text-center hover:border-accent2 hover:text-accent1 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-neon-cyan"

@@ -1,5 +1,22 @@
 export const Experiences = [
   {
+    tab: "Tectrionix",
+    company: "Tectrionix",
+    position: "Senior Full Stack Developer | Team Lead",
+    type: "Ahmedabad, Gujarat",
+    duration: "July 2024 – Present",
+    description: `
+          - Leading end-to-end delivery of SaaS and automation projects across product planning, implementation, and release quality.
+          - Architected and scaled a multi-tenant automotive wholesale SaaS platform with PostgreSQL and Node.js.
+          - Implemented a database-per-tenant approach for 25,000+ tenants, significantly reducing active database connections and improving isolation.
+          - Built production billing workflows with Stripe including subscriptions, usage-based billing, invoicing, and plan enforcement.
+          - Delivered Zoho-based CRM and operations automations across CRM, FSM, Desk, Bookings, Books, and Social.
+          - Mentored developers, reviewed pull requests, and maintained testing and deployment standards for reliable releases.
+        `,
+    technologies:
+      "Next.js, TypeScript, React.js, Node.js, Express.js, PostgreSQL, Stripe, Zoho CRM Suite, WordPress",
+  },
+  {
     tab: "Dasinfomedia",
     company: "Dasinfomedia PVT LTD",
     position: "WordPress Development Intern",

@@ -59,7 +59,7 @@ Stick around to see some of my work.
 
 ### Call-to-Action Buttons:
 1. **"Hire Me"** → Scrolls to contact section
-2. **"Download CV"** → Links to: `https://drive.google.com/file/d/1SC7wVl0dTVNE_AVOiAGbt3WWGof-yIbp/view?usp=drive_link`
+2. **"Download CV"** → Links to: `https://drive.google.com/file/d/1vp9XNX6VGZ51p46-H9hB5Wao7ra9BY1k/view?usp=drivesdk`
 
 ### Hero Image:
 - Path: `/images/heroImg.png`
@@ -323,7 +323,7 @@ All Rights Reserved © [Current Year] - Priyank
 ### Other External Links:
 
 #### CV/Resume
-- **URL:** https://drive.google.com/file/d/1SC7wVl0dTVNE_AVOiAGbt3WWGof-yIbp/view?usp=drive_link
+- **URL:** https://drive.google.com/file/d/1vp9XNX6VGZ51p46-H9hB5Wao7ra9BY1k/view?usp=drivesdk
 - **Location:** Hero section "Download CV" button
 
 ### Navbar Branding:
